@@ -1,0 +1,41 @@
+{
+  "name": "mikepthomas.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^2.1.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "main-bower-files": "^2.13.1",
+    "wiredep": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikepthomas/mikepthomas.github.io.git"
+  },
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "Mike Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikepthomas/mikepthomas.github.io/issues"
+  },
+  "homepage": "https://github.com/mikepthomas/mikepthomas.github.io#readme"
+}

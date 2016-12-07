@@ -1,0 +1,27 @@
+{
+  "name": "mikepthomas.github.io",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Mike Thomas"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "homepage": "https://github.com/mikepthomas/mikepthomas.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
