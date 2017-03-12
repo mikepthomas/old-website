@@ -1,7 +1,9 @@
 {
   "name": "mikepthomas.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "Source for www.mikethomas.info",
+  "author": "Mike Thomas",
+  "license" : "BSD-2-Clause",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1",
@@ -15,11 +17,10 @@
     "gulp-load-plugins": "^1.4.0",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.11",
-    "main-bower-files": "^2.13.1",
     "wiredep": "^4.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bower-installer": "bower-installer"
   },
   "repository": {
     "type": "git",
@@ -32,8 +33,6 @@
     "client",
     "browser"
   ],
-  "author": "Mike Thomas",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/mikepthomas/mikepthomas.github.io/issues"
   },

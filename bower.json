@@ -5,7 +5,7 @@
   "authors": [
     "Mike Thomas"
   ],
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "keywords": [
     "util",
     "functional",
@@ -22,6 +22,45 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap": "bootstrap-sass#3.3.7",
+    "handlebars": "4.0.5",
+    "jquery": "3.1.1",
+    "jspdf": "1.3.3"
+  },
+  "install": {
+    "path": {
+      "js": "libs",
+      "map": "libs",
+      "otf": "fonts/{key}",
+      "eot": "fonts/{key}",
+      "svg": "fonts/{key}",
+      "ttf": "fonts/{key}",
+      "woff": "fonts/{key}",
+      "woff2": "fonts/{key}"
+    },
+    "sources": {
+      "bootstrap": [
+        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2",
+        "bower_components/bootstrap/assets/javascripts/bootstrap.js",
+        "bower_components/bootstrap/assets/javascripts/bootstrap.min.js"
+      ],
+      "handlebars": [
+        "bower_components/handlebars/handlebars.js",
+        "bower_components/handlebars/handlebars.min.js"
+      ],
+      "jquery": [
+        "bower_components/jquery/dist/jquery.js",
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/jquery/dist/jquery.min.map"
+      ],
+      "jspdf": [
+        "bower_components/jspdf/dist/jspdf.debug.js",
+        "bower_components/jspdf/dist/jspdf.min.js"
+      ]
+    }
   }
 }

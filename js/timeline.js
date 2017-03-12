@@ -1,0 +1,1 @@
+var source=$("#timeline-template").html(),template=Handlebars.compile(source),context={title:"Sir Thomas Picton School (Haverfordwest)",from:"September 1997",to:"July 2002",body:"<h5>GCSEs</h5><ul><li>Eight Full Course [Seven Grade C and Above]</li><li>Two Short Course [A and B]</li></ul>"},html=template(context);$(".timeline").append(html);

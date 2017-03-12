@@ -27,7 +27,7 @@
 var gulp = require('gulp');
 var wiredep = require('wiredep').stream;
 var plugins = require('gulp-load-plugins')({
-    pattern: ['gulp-*', 'inject', 'main-bower-files']
+    pattern: ['gulp-*', 'inject']
 });
 
 gulp.task('css', function () {
@@ -68,7 +68,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src(plugins.mainBowerFiles().concat('src/js/*'))
+    return gulp.src('src/js/*')
             .pipe(plugins.filter('**/*.js'))
             .pipe(plugins.uglify())
             .pipe(gulp.dest('./js'));

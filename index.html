@@ -451,25 +451,23 @@ POSSIBILITY OF SUCH DAMAGE.
                         </div>
                     </div>
                 </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-badge"><i class="glyphicon glyphicon-education"></i></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">Sir Thomas Picton School (Haverfordwest)</h4>
-                            <small class="text-muted">
-                                <i class="glyphicon glyphicon-calendar"></i>
-                                September 1997- July 2002
-                            </small>
+                <script type="text/html" id="timeline-template">
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge"><i class="glyphicon glyphicon-education"></i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title">{{title}}</h4>
+                                <small class="text-muted">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    {{from}} - {{to}}
+                                </small>
+                            </div>
+                            <div class="timeline-body">
+                                {{{body}}}
+                            </div>
                         </div>
-                        <div class="timeline-body">
-                            <h5>GCSEs</h5>
-                            <ul>
-                                <li>Eight Full Course [Seven Grade C and Above]</li>
-                                <li>Two Short Course [A and B]</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                </script>
             </ul>
 
             <hr>
@@ -479,9 +477,11 @@ POSSIBILITY OF SUCH DAMAGE.
             </footer>
         </div> <!-- /container -->
 
+        <script src="libs/jquery/jquery.min.js"></script>
+        <script src="libs/bootstrap/bootstrap.min.js"></script>
+        <script src="libs/handlebars/handlebars.min.js"></script>
         <!-- inject:js -->
-        <script src="js/bootstrap.js"></script>
-        <script src="js/jquery.js"></script>
+        <script src="js/timeline.js"></script>
         <!-- endinject -->
     </body>
 </html>
