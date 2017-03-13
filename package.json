@@ -12,7 +12,6 @@
   "devDependencies": {
     "gulp-clean-css": "^2.1.0",
     "gulp-filter": "^4.0.0",
-    "gulp-flatten": "^0.3.1",
     "gulp-inject": "^4.1.0",
     "gulp-load-plugins": "^1.4.0",
     "gulp-uglify": "^2.0.0",

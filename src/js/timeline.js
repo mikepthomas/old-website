@@ -1,5 +1,5 @@
 /* 
- * Copyright (c) 2017, Mike
+ * Copyright (c) 2017, Mike Thomas
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,11 +26,25 @@
 
 var source = $("#timeline-template").html();
 var template = Handlebars.compile(source);
-var context = {
-    title: "Sir Thomas Picton School (Haverfordwest)",
-    from: "September 1997",
-    to: "July 2002",
-    body: "<h5>GCSEs</h5><ul><li>Eight Full Course [Seven Grade C and Above]</li><li>Two Short Course [A and B]</li></ul>"
-};
-var html = template(context);
-$(".timeline").append(html);
+Handlebars.registerHelper('formatDate', function(input) {
+    if (input === null) {
+        return "Present";
+    } else {
+        var date = new Date(input);
+        var monthNames = [
+            "January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"
+        ];
+        return monthNames[date.getMonth()] + ' ' + date.getFullYear();
+    }
+});
+Handlebars.registerHelper('isEducation', function(input) {
+    return input === "education";
+});
+
+$.ajax({
+    url: "../data/experience.json"
+}).done(function(data) {
+    var html = template(data);
+    $(".timeline").append(html);
+});

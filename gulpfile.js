@@ -1,5 +1,5 @@
 /* 
- * Copyright (c) 2016, Mike
+ * Copyright (c) 2016, Mike Thomas
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -61,12 +61,6 @@ gulp.task('css', function () {
             .pipe(gulp.dest('css'));
 });
 
-gulp.task('fonts', function () {
-    return gulp.src('./bower_components/**/*.{eot,svg,ttf,woff,woff2}')
-            .pipe(plugins.flatten())
-            .pipe(gulp.dest('fonts/bootstrap'));
-});
-
 gulp.task('js', function () {
     return gulp.src('src/js/*')
             .pipe(plugins.filter('**/*.js'))
@@ -79,7 +73,7 @@ gulp.task('watch', function () {
     gulp.watch('src/js/**/*.js', ['js']);
 });
 
-gulp.task('default', ['css', 'fonts', 'js'], function () {
+gulp.task('default', ['css', 'js'], function () {
     var injectFiles = gulp.src(['css/*.css', 'js/*.js']);
 
     var injectOptions = {
