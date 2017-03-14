@@ -1,0 +1,1 @@
+require(["require-config"],function(){require(["jquery","bootstrap"],function(e){e("body").find("*[data-js]").each(function(){var o=e(this),n=o.data("js");n?e.each(n.split(" "),function(e,n){require([n],function(e){e(o)},function(e){console.log(e.requireModules[0]+".js not found.")})}):console.error("Empty data-js tag found, remove references.")})})});

@@ -25,7 +25,8 @@
     "bootstrap": "bootstrap-sass#3.3.7",
     "handlebars": "4.0.5",
     "jquery": "3.1.1",
-    "jspdf": "1.3.3"
+    "jspdf": "1.3.3",
+    "requirejs": "2.3.3"
   },
   "install": {
     "path": {
@@ -60,6 +61,9 @@
       "jspdf": [
         "bower_components/jspdf/dist/jspdf.debug.js",
         "bower_components/jspdf/dist/jspdf.min.js"
+      ],
+      "requirejs": [
+        "bower_components/requirejs/require.js"
       ]
     }
   }

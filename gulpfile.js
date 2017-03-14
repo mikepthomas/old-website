@@ -74,7 +74,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['css', 'js'], function () {
-    var injectFiles = gulp.src(['css/*.css', 'js/*.js']);
+    var injectFiles = gulp.src('css/*.css');
 
     var injectOptions = {
         addRootSlash: false

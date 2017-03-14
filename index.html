@@ -170,8 +170,8 @@ POSSIBILITY OF SUCH DAMAGE.
             <div class="page-header">
                 <h1 id="timeline">How I've got here!</h1>
             </div>
-            <ul class="timeline">
-                <script type="text/html" id="timeline-template">
+            <ul class="timeline" data-js="timeline">
+                <script type="text/html">
                     {{#each .}}
                     <li{{#if (isEducation icon)}} class="timeline-inverted"{{/if}}>
                         <div class="timeline-badge {{color}}">
@@ -202,11 +202,6 @@ POSSIBILITY OF SUCH DAMAGE.
             </footer>
         </div> <!-- /container -->
 
-        <script src="libs/jquery/jquery.min.js"></script>
-        <script src="libs/bootstrap/bootstrap.min.js"></script>
-        <script src="libs/handlebars/handlebars.min.js"></script>
-        <!-- inject:js -->
-        <script src="js/timeline.js"></script>
-        <!-- endinject -->
+        <script data-main="js/application" src="libs/requirejs/require.js"></script>
     </body>
 </html>

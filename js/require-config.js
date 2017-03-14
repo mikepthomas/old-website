@@ -1,0 +1,1 @@
+require.config({paths:{bootstrap:"/libs/bootstrap/bootstrap.min",handlebars:"/libs/handlebars/handlebars.min",jquery:"/libs/jquery/jquery.min",jspdf:"/libs/jspdf/jspdf.min"},shim:{bootstrap:["jquery"]}});
