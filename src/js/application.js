@@ -23,14 +23,14 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-require(["require-config"], function() {
+require(["require-config.min"], function() {
     require(["jquery", "bootstrap"], function($) {
         $("body").find("*[data-js]").each(function() {
             var element = $(this),
                 files = element.data("js");
             if (files) {
                 $.each(files.split(" "), function(e, file) {
-                    require([file], function(func) {
+                    require([file + ".min"], function(func) {
                         func(element);
                     }, function (err) {
                         console.log(err.requireModules[0] + ".js not found.");

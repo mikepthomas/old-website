@@ -64,7 +64,16 @@ gulp.task('css', function () {
 gulp.task('js', function () {
     return gulp.src('src/js/*')
             .pipe(plugins.filter('**/*.js'))
+            .pipe(plugins.sourcemaps.init())
+            .pipe(plugins.rename({suffix: '.min'}))
             .pipe(plugins.uglify())
+            .pipe(plugins.sourcemaps.write('.', {
+                includeContent: false,
+                sourceRoot: '../src/js',
+                mapSources: function (sourcePath) {
+                    return sourcePath.replace('.min', '');
+                }
+            }))
             .pipe(gulp.dest('./js'));
 });
 
