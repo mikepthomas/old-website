@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitUseStrict": true,
+        "noUnusedLocals": true,
+        "strictNullChecks": true,
+        "target": "es5"
+    },
+    "include": [
+        "./typings/index.d.ts",
+        "./src/js/**/*.ts"
+    ]
+}

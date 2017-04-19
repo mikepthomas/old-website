@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (c) 2017, Mike Thomas
  * All rights reserved.
  *
@@ -23,22 +23,14 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-require(["require-config.min"], function() {
-    require(["jquery", "bootstrap"], function($) {
-        $("body").find("*[data-js]").each(function() {
-            var element = $(this),
-                files = element.data("js");
-            if (files) {
-                $.each(files.split(" "), function(e, file) {
-                    require([file + ".min"], function(func) {
-                        func(element);
-                    }, function (err) {
-                        console.log(err.requireModules[0] + ".js not found.");
-                    });
-                });
-            } else {
-                console.error("Empty data-js tag found, remove references.");
-            }
-        });
-    });
+require.config({
+    paths: {
+        bootstrap: "/libs/bootstrap/bootstrap.min",
+        handlebars: "/libs/handlebars/handlebars.min",
+        jquery: "/libs/jquery/jquery.min",
+        jspdf: "/libs/jspdf/jspdf.min"
+    },
+    shim: {
+        "bootstrap": ["jquery"]
+    }
 });

@@ -29,6 +29,7 @@ var wiredep = require('wiredep').stream;
 var plugins = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'inject']
 });
+var tsProject = plugins.typescript.createProject("tsconfig.json");
 
 gulp.task('css', function () {
     var injectGlobalFiles = gulp.src('src/sass/global/*.scss', {read: false});
@@ -57,24 +58,44 @@ gulp.task('css', function () {
             .pipe(plugins.inject(injectGlobalFiles, injectGlobalOptions))
             .pipe(plugins.inject(injectAppFiles, injectAppOptions))
             .pipe(plugins.sass())
-            .pipe(plugins.cleanCss())
-            .pipe(gulp.dest('css'));
-});
-
-gulp.task('js', function () {
-    return gulp.src('src/js/*')
-            .pipe(plugins.filter('**/*.js'))
-            .pipe(plugins.sourcemaps.init())
+            .pipe(plugins.autoprefixer())
+            .pipe(gulp.dest('css'))
             .pipe(plugins.rename({suffix: '.min'}))
-            .pipe(plugins.uglify())
+            .pipe(plugins.sourcemaps.init())
+            .pipe(plugins.cleanCss())
             .pipe(plugins.sourcemaps.write('.', {
                 includeContent: false,
-                sourceRoot: '../src/js',
+                sourceRoot: '.',
                 mapSources: function (sourcePath) {
                     return sourcePath.replace('.min', '');
                 }
             }))
-            .pipe(gulp.dest('./js'));
+            .pipe(gulp.dest('css'));
+});
+
+gulp.task('docs', function (cb) {
+    var config = require('./jsdoc.json');
+    gulp.src(['README.md', 'js/**/*.js'], {read: false})
+        .pipe(plugins.jsdoc3(config, cb));
+});
+
+gulp.task('js', function () {
+    var tsResult = tsProject.src()
+        .pipe(plugins.sourcemaps.init())
+        .pipe(tsProject());
+
+    return tsResult.js
+        .pipe(gulp.dest('js'))
+        .pipe(plugins.rename({suffix: '.min'}))
+        .pipe(plugins.uglify())
+        .pipe(plugins.sourcemaps.write('.', {
+            includeContent: false,
+            sourceRoot: '../src/js',
+            mapSources: function (sourcePath) {
+                return sourcePath.replace('.min', '');
+            }
+        }))
+        .pipe(gulp.dest('js'));
 });
 
 gulp.task('watch', function () {
@@ -83,7 +104,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['css', 'js'], function () {
-    var injectFiles = gulp.src('css/*.css');
+    var injectFiles = gulp.src('css/*.min.css');
 
     var injectOptions = {
         addRootSlash: false

@@ -23,32 +23,25 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-define(["jquery", "handlebars"], function($, Handlebars) {
-    function timeline(container) {
-        var source = container.find("script").html();
-        var template = Handlebars.compile(source);
-        Handlebars.registerHelper('formatDate', function(input) {
-            if (input === null) {
-                return "Present";
+require(["require-config.min"], function() {
+    require(["jquery", "bootstrap"], function($: JQueryStatic) {
+        $("body").find("*[data-js]").each(function(index, value) {
+            let element = $(value),
+                files: string = element.data("js");
+            if (files) {
+                $.each(files.split(" "), function(e, filename) {
+                    interface JavaScriptFile {
+                        default: any;
+                    }
+                    require([filename + ".min"], function (file: JavaScriptFile) {
+                        file.default(element);
+                    }, function (err: RequireError) {
+                        console.log(err.requireModules[0] + ".js not found.");
+                    });
+                });
             } else {
-                var date = new Date(input);
-                var monthNames = [
-                    "January", "February", "March", "April", "May", "June", "July",
-                    "August", "September", "October", "November", "December"
-                ];
-                return monthNames[date.getMonth()] + ' ' + date.getFullYear();
+                console.error("Empty data-js tag found, remove references.");
             }
         });
-        Handlebars.registerHelper('isEducation', function(input) {
-            return input === "education";
-        });
-
-        $.ajax({
-            url: "../data/experience.json"
-        }).done(function(data) {
-            var html = template(data);
-            container.append(html);
-        });
-    }
-    return timeline;
+    });
 });
