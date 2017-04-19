@@ -23,19 +23,19 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-require(["require-config.min"], function() {
-    require(["jquery", "bootstrap"], function($: JQueryStatic) {
+require(["require-config"], () => {
+    require(["jquery", "bootstrap"], ($: JQueryStatic) => {
         $("body").find("*[data-js]").each(function(index, value) {
             let element = $(value),
                 files: string = element.data("js");
             if (files) {
                 $.each(files.split(" "), function(e, filename) {
                     interface JavaScriptFile {
-                        default: any;
+                        default: Function;
                     }
-                    require([filename + ".min"], function (file: JavaScriptFile) {
+                    require([filename], (file: JavaScriptFile) => {
                         file.default(element);
-                    }, function (err: RequireError) {
+                    }, (err: RequireError) => {
                         console.log(err.requireModules[0] + ".js not found.");
                     });
                 });

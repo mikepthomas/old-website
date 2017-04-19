@@ -23,32 +23,12 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-import $ = require("jquery");
-import Handlebars = require("handlebars");
-import {Experience} from "model/experience";
+import {ExperienceList} from "model/experience"
+import {Timeline} from "view/timeline";
 
-export default function timeline(container: JQuery): void {
-    let source = container.find("script").html();
-    let template = Handlebars.compile(source);
-
-    Handlebars.registerHelper('formatDate', function(input: string) {
-        if (input === null) {
-            return "Present";
-        } else {
-            let date = new Date(input);
-            let monthNames = [
-                "January", "February", "March", "April", "May", "June", "July",
-                "August", "September", "October", "November", "December"
-            ];
-            return monthNames[date.getMonth()] + ' ' + date.getFullYear();
-        }
-    });
-    Handlebars.registerHelper('isEducation', (input: string) => input === "education");
-
-    $.ajax({
-        url: "../data/experience.json"
-    }).done(function(data: Experience[]) {
-        let html = template(data);
-        container.append(html);
+export default(container: JQuery): Timeline => {
+    return new Timeline({
+        el: container,
+        collection: new ExperienceList()
     });
 }

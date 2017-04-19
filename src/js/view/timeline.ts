@@ -23,28 +23,44 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-require.config({
-    paths: {
-        backbone: "/libs/backbone/backbone-min",
-        bootstrap: "/libs/bootstrap/bootstrap.min",
-        handlebars: "/libs/handlebars/handlebars.min",
-        jquery: "/libs/jquery/jquery.min",
-        jspdf: "/libs/jspdf/jspdf.min",
-        underscore: "/libs/underscore/underscore-min"
-    },
-    shim: {
-        "backbone": {
-            "deps": ["jquery", "underscore"],
-            "exports": "Backbone"
-        },
-        "bootstrap": {
-            "deps": ["jquery"]
-        },
-        "handlebars": {
-            "exports": "Handlebars"
-        },
-        "underscore": {
-            "exports": "_"
-        }
+import Backbone = require("backbone");
+import Handlebars = require("handlebars");
+
+export class Timeline extends Backbone.View<Backbone.Model> {
+
+    private template: HandlebarsTemplateDelegate;
+
+    initialize() {
+        // Register Handlebars helpers
+        Handlebars.registerHelper('formatDate', (input: string) => {
+            if (input === null) {
+                return "Present";
+            } else {
+                let date = new Date(input);
+                let monthNames = [
+                    "January", "February", "March", "April", "May", "June", "July",
+                    "August", "September", "October", "November", "December"
+                ];
+                return monthNames[date.getMonth()] + ' ' + date.getFullYear();
+            }
+        });
+        Handlebars.registerHelper('isEducation', (input: string) => input === "education");
+
+        // Get the Handlebars template
+        let source = this.$el.find("script").html();
+        this.template = Handlebars.compile(source);
+
+        // Get the data and render the view
+        this.collection.fetch({
+            success: () => {
+                this.render();
+            }
+        });
     }
-});
+
+    render() {
+        let html = this.template(this.collection.toJSON());
+        this.$el.html(html);
+        return this;
+    }
+}

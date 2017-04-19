@@ -35,19 +35,15 @@ gulp.task('css', function () {
     var injectGlobalFiles = gulp.src('src/sass/global/*.scss', {read: false});
     var injectAppFiles = gulp.src('src/sass/styles/*.scss', {read: false});
 
-    function transformFilepath(filepath) {
-        return '@import "' + filepath + '";';
-    }
-
     var injectGlobalOptions = {
-        transform: transformFilepath,
+        transform: plugins.inject.transform.scss,
         starttag: '// inject:global',
         endtag: '// endinject',
         addRootSlash: false
     };
 
     var injectAppOptions = {
-        transform: transformFilepath,
+        transform: plugins.inject.transform.scss,
         starttag: '// inject:app',
         endtag: '// endinject',
         addRootSlash: false
@@ -85,15 +81,10 @@ gulp.task('js', function () {
         .pipe(tsProject());
 
     return tsResult.js
-        .pipe(gulp.dest('js'))
-        .pipe(plugins.rename({suffix: '.min'}))
         .pipe(plugins.uglify())
         .pipe(plugins.sourcemaps.write('.', {
             includeContent: false,
-            sourceRoot: '../src/js',
-            mapSources: function (sourcePath) {
-                return sourcePath.replace('.min', '');
-            }
+            sourceRoot: '../src/js'
         }))
         .pipe(gulp.dest('js'));
 });

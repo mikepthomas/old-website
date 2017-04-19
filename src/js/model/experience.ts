@@ -23,7 +23,9 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-export class Experience {
+import Backbone = require("backbone");
+
+export class Experience extends Backbone.Model {
     title: string
     startDate: string
     endDate: string
@@ -32,4 +34,8 @@ export class Experience {
     description: string
     color: "" | "danger" | "info" | "primary" | "success"
     icon: "apple" | "briefcase" | "education" | "lock" | "wrench"
+}
+
+export class ExperienceList extends Backbone.Collection<Experience> {
+    url = "/data/experience.json";
 }
