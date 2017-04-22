@@ -5788,21 +5788,32 @@ body, html {
   z-index: 10000; }
 
 .jumbotron {
-  background: url("img/banner.jpg") no-repeat 25% 50% fixed;
+  background-image: url(img/banner-sm.jpg);
+  background-repeat: no-repeat;
+  background-position: 35% 100%;
   background-size: cover;
   height: 100%;
-  text-shadow: 3px 3px 3px #333333, 0 0 1px black; }
+  text-shadow: 3px 3px 3px #222222, 0 0 1px black; }
   .jumbotron .container {
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 10%; }
+  @media (min-width: 768px) {
+    .jumbotron {
+      background-image: url("img/banner-md.jpg"); } }
+  @media (min-width: 1200px) {
+    .jumbotron {
+      background-image: url("img/banner.jpg");
+      background-attachment: fixed;
+      background-position-x: 0; } }
   @media (max-width: 768px) {
     .jumbotron .container {
-      width: 75%; }
+      width: 100%; }
       .jumbotron .container p {
-        font-size: 1em; } }
+        font-size: 1em;
+        font-weight: bold; } }
 
 .timeline {
   list-style: none;
@@ -5901,7 +5912,7 @@ body, html {
 .timeline-body > p + p {
   margin-top: 5px; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   ul.timeline:before {
     left: 40px; }
   ul.timeline > li > .timeline-panel {
@@ -5924,7 +5935,7 @@ body, html {
     left: -14px;
     right: auto; } }
 
-@media (max-width: 568px) {
+@media (max-width: 480px) {
   ul.timeline:before {
     display: none; }
   ul.timeline > li > .timeline-panel, ul.timeline > li > .timeline-panel.timeline-inverted {

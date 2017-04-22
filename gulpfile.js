@@ -27,6 +27,7 @@
 var gulp = require('gulp');
 var wiredep = require('wiredep').stream;
 var plugins = require('gulp-load-plugins')({
+    lazy: true,
     pattern: ['gulp-*', 'inject']
 });
 var tsProject = plugins.typescript.createProject("tsconfig.json");
@@ -75,6 +76,18 @@ gulp.task('docs', function (cb) {
         .pipe(plugins.jsdoc3(config, cb));
 });
 
+gulp.task('img', function() {
+    return gulp.src('./src/img/**/*.{png, jpg, bmp}')
+    .pipe(plugins.jimpResize({
+        sizes: [
+            {"suffix": "md", "width": 1024},
+            {"suffix": "sm", "width": 640}
+        ]
+    }))
+    .pipe(plugins.imagemin())
+    .pipe(gulp.dest('img'));
+});
+
 gulp.task('js', function () {
     var tsResult = tsProject.src()
         .pipe(plugins.sourcemaps.init())
@@ -91,10 +104,11 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
     gulp.watch('src/sass/**/*.scss', ['css']);
+    gulp.watch('src/img/**/*.{png, jpg, bmp}', ['img']);
     gulp.watch('src/js/**/*.js', ['js']);
 });
 
-gulp.task('default', ['css', 'js'], function () {
+gulp.task('default', ['css', 'img','js'], function () {
     var injectFiles = gulp.src('css/*.min.css');
 
     var injectOptions = {
