@@ -31,6 +31,16 @@ body, html {
     height: 100%;
 }
 
+.github-banner {
+    img {
+        position: fixed;
+        top: 0;
+        right: 0;
+        border: 0;
+        z-index: 10000;
+    }
+}
+
 .jumbotron {
     background: url("img/banner.jpg") no-repeat 25% 50% fixed;
     background-size: cover;
@@ -43,6 +53,15 @@ body, html {
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         bottom: 10%;
+    }
+    @media (max-width: 768px) {
+        .container {
+            width: 75%;
+
+            p {
+                font-size: 1em;
+            }
+        }
     }
 }
 
