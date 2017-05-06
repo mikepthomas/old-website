@@ -5800,6 +5800,8 @@ body, html {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 10%; }
+    .jumbotron .container h1 {
+      font-family: 'Press Start 2P'; }
   @media (min-width: 768px) {
     .jumbotron {
       background-image: url("img/banner-md.jpg"); } }
