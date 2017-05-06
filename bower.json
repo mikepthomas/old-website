@@ -24,9 +24,10 @@
   "dependencies": {
     "backbone": "1.3.3",
     "bootstrap": "bootstrap-sass#3.3.7",
-    "handlebars": "4.0.5",
+    "handlebars": "4.0.8",
     "jquery": "3.2.0",
     "jspdf": "1.3.4",
+    "moment": "2.18.1",
     "requirejs": "2.3.3"
   },
   "install": {
@@ -67,6 +68,10 @@
       "jspdf": [
         "bower_components/jspdf/dist/jspdf.debug.js",
         "bower_components/jspdf/dist/jspdf.min.js"
+      ],
+      "moment": [
+        "bower_components/moment/min/moment.min.js",
+        "bower_components/moment/moment.js"
       ],
       "requirejs": [
         "bower_components/requirejs/require.js"

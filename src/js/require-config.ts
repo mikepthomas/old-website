@@ -30,6 +30,7 @@ require.config({
         handlebars: "/libs/handlebars/handlebars.min",
         jquery: "/libs/jquery/jquery.min",
         jspdf: "/libs/jspdf/jspdf.min",
+        moment: "/libs/moment/moment.min",
         underscore: "/libs/underscore/underscore-min"
     },
     shim: {

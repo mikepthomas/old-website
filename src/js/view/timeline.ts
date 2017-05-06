@@ -25,6 +25,7 @@
  */
 import Backbone = require("backbone");
 import Handlebars = require("handlebars");
+import * as moment from "moment";
 
 export class Timeline extends Backbone.View<Backbone.Model> {
 
@@ -32,16 +33,42 @@ export class Timeline extends Backbone.View<Backbone.Model> {
 
     initialize() {
         // Register Handlebars helpers
-        Handlebars.registerHelper('formatDate', (input: string) => {
+        Handlebars.registerHelper("dateDiff", (start: Date, end: Date) => {
+            if (end === null) {
+                end = new Date();
+            }
+
+            let startDate = moment(start);
+            let endDate = moment(end);
+
+            let out = "";
+            let years = endDate.diff(startDate, "year");
+            if (years > 0) {
+                startDate.add(years, "years");
+                out += years + " year";
+                if (years > 1) {
+                    out += "s";
+                }
+            }
+
+            let months = endDate.diff(startDate, "months");
+            if (months > 0) {
+                if (years > 0) {
+                    out += ", ";
+                }
+                out += months + " month";
+                if (months > 1) {
+                    out += "s";
+                }
+            }
+
+            return out;
+        });
+        Handlebars.registerHelper("formatDate", (input: Date) => {
             if (input === null) {
                 return "Present";
             } else {
-                let date = new Date(input);
-                let monthNames = [
-                    "January", "February", "March", "April", "May", "June", "July",
-                    "August", "September", "October", "November", "December"
-                ];
-                return monthNames[date.getMonth()] + ' ' + date.getFullYear();
+                return moment(input).format("MMMM YYYY");
             }
         });
         Handlebars.registerHelper('isEducation', (input: string) => input === "education");
