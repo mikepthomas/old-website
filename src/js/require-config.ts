@@ -31,7 +31,8 @@ require.config({
         jquery: "/libs/jquery/jquery.min",
         jspdf: "/libs/jspdf/jspdf.min",
         moment: "/libs/moment/moment.min",
-        underscore: "/libs/underscore/underscore-min"
+        underscore: "/libs/underscore/underscore-min",
+        wow: "/libs/wow/wow.min"
     },
     shim: {
         "backbone": {
@@ -46,6 +47,9 @@ require.config({
         },
         "underscore": {
             "exports": "_"
+        },
+        "wow": {
+            "exports": "WOW"
         }
     }
 });

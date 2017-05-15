@@ -192,7 +192,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <ul class="timeline" data-js="timeline">
                 <script type="text/html">
                     {{#each .}}
-                    <li{{#if (isEducation icon)}} class="timeline-inverted"{{/if}}>
+                    <li class={{#if (isEducation icon)}}"timeline-inverted wow fadeInRight"{{else}}"wow fadeInLeft"{{/if}}>
                         <div class="timeline-badge {{color}}">
                             <i class="glyphicon glyphicon-{{icon}}"></i>
                         </div>

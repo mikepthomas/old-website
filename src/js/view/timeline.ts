@@ -23,6 +23,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+declare var WOW: any;
 import Backbone = require("backbone");
 import Handlebars = require("handlebars");
 import * as moment from "moment";
@@ -88,6 +89,9 @@ export class Timeline extends Backbone.View<Backbone.Model> {
     render() {
         let html = this.template(this.collection.toJSON());
         this.$el.html(html);
+        require(["wow"], () => {
+            new WOW().init();
+        });
         return this;
     }
 }
