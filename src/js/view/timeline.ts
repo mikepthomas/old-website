@@ -72,7 +72,7 @@ export class Timeline extends Backbone.View<Backbone.Model> {
                 return moment(input).format("MMMM YYYY");
             }
         });
-        Handlebars.registerHelper('isEducation', (input: string) => input === "education");
+        Handlebars.registerHelper('isEducation', (input: string) => input === "mortar-board");
 
         // Get the Handlebars template
         let source = this.$el.find("script").html();

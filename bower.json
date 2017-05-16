@@ -23,7 +23,8 @@
   ],
   "dependencies": {
     "backbone": "1.3.3",
-    "bootstrap": "bootstrap-sass#3.3.7",
+    "bootstrap": "4.0.0-alpha.6",
+    "font-awesome": "4.7.0",
     "handlebars": "4.0.8",
     "jquery": "3.2.0",
     "jspdf": "1.3.4",
@@ -49,13 +50,16 @@
         "bower_components/backbone/backbone.js"
       ],
       "bootstrap": [
-        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-        "bower_components/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2",
-        "bower_components/bootstrap/assets/javascripts/bootstrap.js",
-        "bower_components/bootstrap/assets/javascripts/bootstrap.min.js"
+        "bower_components/bootstrap/dist/js/bootstrap.js",
+        "bower_components/bootstrap/dist/js/bootstrap.min.js"
+      ],
+      "font-awesome": [
+        "bower_components/font-awesome/fonts/FontAwesome.otf",
+        "bower_components/font-awesome/fonts/fontawesome-webfont.eot",
+        "bower_components/font-awesome/fonts/fontawesome-webfont.svg",
+        "bower_components/font-awesome/fonts/fontawesome-webfont.ttf",
+        "bower_components/font-awesome/fonts/fontawesome-webfont.woff",
+        "bower_components/font-awesome/fonts/fontawesome-webfont.woff2"
       ],
       "handlebars": [
         "bower_components/handlebars/handlebars.js",
@@ -76,6 +80,10 @@
       ],
       "requirejs": [
         "bower_components/requirejs/require.js"
+      ],
+      "tether": [
+        "bower_components/tether/dist/tether.js",
+        "bower_components/tether/dist/tether.min.js"
       ],
       "underscore": [
         "bower_components/underscore/underscore-min.js",

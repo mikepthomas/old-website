@@ -33,7 +33,7 @@ export class Experience extends Backbone.Model {
     location: string
     description: string
     color: "" | "danger" | "info" | "primary" | "success"
-    icon: "apple" | "briefcase" | "education" | "lock" | "wrench"
+    icon: "apple" | "briefcase" | "mortar-board" | "lock" | "wrench"
 }
 
 export class ExperienceList extends Backbone.Collection<Experience> {

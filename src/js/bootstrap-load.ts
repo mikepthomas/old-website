@@ -23,25 +23,9 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-require(["require-config"], () => {
-    require(["jquery"], ($: JQueryStatic) => {
-        $("html").find("*[data-js]").each(function(index, value) {
-            let element = $(value),
-                files: string = element.data("js");
-            if (files) {
-                $.each(files.split(" "), function(e, filename) {
-                    interface JavaScriptFile {
-                        default: Function;
-                    }
-                    require([filename], (file: JavaScriptFile) => {
-                        file.default(element);
-                    }, (err: RequireError) => {
-                        console.log(err.requireModules[0] + ".js not found.");
-                    });
-                });
-            } else {
-                console.error("Empty data-js tag found, remove references.");
-            }
-        });
+export default() => {
+    require(['tether'], function (Tether: any) {
+        (<any>window).Tether = Tether;
+        return require(['bootstrap']);
     });
-});
+}

@@ -27,7 +27,7 @@
         "location": "University of the West of England",
         "description": "<ul>\n    <li>Advanced Topics in Web Development [54%]</li>\n    <li>Components and Services [50%]</li>\n    <li>Computing Project [60%]</li>\n    <li>Embedded Systems Development [67%]</li>\n    <li>Professional, Legal &amp; Commercial Issues [52%]</li>\n    <li>Requirements Engineering [64%]</li>\n</ul>",
         "color": "success",
-        "icon": "education"
+        "icon": "mortar-board"
     },
     {
         "title": "Information Systems Technical Support",
@@ -57,7 +57,7 @@
         "location": "University of the West of England",
         "description": "<ul>\n    <li>Client-Server Programming [79%]</li>\n    <li>Computer Networks and Operating Systems [71%]</li>\n    <li>Data, Schemas and Applications [74%]</li>\n    <li>Project Management [70%]</li>\n    <li>Software Design [83%]</li>\n    <li>Software Engineering [53%]</li>\n</ul>",
         "color": "success",
-        "icon": "education"
+        "icon": "mortar-board"
     },
     {
         "title": "Supervisor Security Officer",
@@ -77,7 +77,7 @@
         "location": "University of the West of England",
         "description": "<ul>\n    <li>Analytical Modelling [87%]</li>\n    <li>Computer Science Concepts [80%]</li>\n    <li>Computer Systems [65%]</li>\n    <li>Information Systems Application Contexts [59%]</li>\n    <li>Introduction to Program Development [92%]</li>\n    <li>Systems Development [72%]</li>\n</ul>",
         "color": "success",
-        "icon": "education"
+        "icon": "mortar-board"
     },
     {
         "title": "Contract Support Officer",
@@ -106,8 +106,7 @@
         "city": "Haverfordwest",
         "location": "Pembrokeshire College",
         "description": "<ul>\n    <li>Double Award AVCE in ICT [B,B]</li>\n    <li>Advanced Subsidiary Physics [E]</li>\n</ul>",
-        "icon": "education",
-        "color": ""
+        "icon": "mortar-board"
     },
     {
         "title": "General Certificate of Secondary Education Qualifications",
@@ -116,7 +115,6 @@
         "city": "Haverfordwest",
         "location": "Sir Thomas Picton School",
         "description": "<ul>\n    <li>Eight Full Course [Seven Grade C and Above]</li>\n    <li>Two Short Course [A and B]</li>\n</ul>",
-        "icon": "education",
-        "color": ""
+        "icon": "mortar-board"
     }
 ]

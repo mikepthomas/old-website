@@ -25,10 +25,14 @@
  */
 /* 
     Created on : 06-Dec-2016, 22:37:44
-    Author     : Mike
+    Author     : Mike Thomas
 */
 body, html {
     height: 100%;
+}
+
+.fa {
+    font-size: 16px;
 }
 
 .github-banner {
@@ -46,8 +50,9 @@ body, html {
     background-repeat: no-repeat;
     background-position: 35% 100%;
     background-size: cover;
+    color: whitesmoke;
+    text-shadow: 3px 3px 3px $gray-dark, 0 0 1px black;
     height: 100%;
-    text-shadow: 3px 3px 3px $gray-darker, 0 0 1px black;
 
     .container {
         position: absolute;
@@ -59,23 +64,22 @@ body, html {
         h1 {
             font-family: 'Press Start 2P';
         }
+        p {
+            font-size: 1rem;
+            font-weight: bold;
+        }
     }
-    @media (min-width: $screen-sm) {
+    @include media-breakpoint-up(md) {
         background-image: url("img/banner-md.jpg");
     }
-    @media (min-width: $screen-lg) {
+    @include media-breakpoint-up(xl) {
         background-image: url("img/banner.jpg");
         background-attachment: fixed;
         background-position-x: 0;
     }
-    @media (max-width: $screen-sm) {
+    @include media-breakpoint-down(sm) {
         .container {
             width: 100%;
-
-            p {
-                font-size: 1em;
-                font-weight: bold;
-            }
         }
     }
 }
@@ -216,7 +220,7 @@ body, html {
     margin-top: 5px;
 }
 
-@media (max-width: $screen-sm) {
+@include media-breakpoint-down(sm) {
     ul.timeline:before {
         left: 40px;
     }
@@ -252,7 +256,7 @@ body, html {
     }
 }
 
-@media (max-width: $screen-xs){
+@include media-breakpoint-down(xs) {
     ul.timeline:before {
         display:none;
     }

@@ -35,41 +35,45 @@ POSSIBILITY OF SUCH DAMAGE.
         <!-- End Google Tag Manager -->
         <title>I wish I was cool... I wish I was Mike Thomas</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href='//fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'>
         <!-- inject:css -->
         <link rel="stylesheet" href="css/main.min.css">
         <!-- endinject -->
     </head>
-    <body>
+    <body data-js="bootstrap-load">
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWLS4W5"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-        
+
         <!-- GitHub Banner -->
-        <a class="github-banner hidden-xs" href="https://github.com/mikepthomas/mikepthomas.github.io">
+        <a class="github-banner hidden-md-down" href="https://github.com/mikepthomas/mikepthomas.github.io">
             <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub">
         </a>
 
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">Mike Thomas</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="https://github.com/mikepthomas">GitHub profile</a></li>
-                        <li><a href="https://www.linkedin.com/in/mikepaulthomas/">LinkedIn profile</a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">Mike Thomas</a>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/mikepthomas">
+                            <i class="fa fa-github"></i>
+                            GitHub profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/mikepaulthomas">
+                            <i class="fa fa-linkedin-square"></i>
+                            LinkedIn profile
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -84,7 +88,7 @@ POSSIBILITY OF SUCH DAMAGE.
                     complex software systems using modern techniques and
                     technologies.
                 </p>
-                <p class="hidden-xs">
+                <p class="hidden-sm-down">
                     Experienced in a number of programming languages including
                     C, Java, Ruby and Python and have a deep understanding of
                     desktop operating systems, Windows and UNIX like, such as,
@@ -100,11 +104,11 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-3">
-                    <h2>This is me...</h2>
-                    <img src="https://avatars3.githubusercontent.com/u/13928052?v=3&s=460" width="200" height="200" class="img-responsive" alt="It's-a-Me!">
+                    <h2 class="mt-2">This is me!</h2>
+                    <img src="https://avatars3.githubusercontent.com/u/13928052?v=3&s=150" width="150" height="150" class="img-responsive" alt="It's-a-Me!">
                 </div>
                 <div class="col-md-5">
-                    <h2>Interests and Achievements</h2>
+                    <h2 class="mt-2">Interests and Achievements</h2>
                     <p>
                         A keen interest in the Royal Air Force and the military
                         in general; I have completed an Accelerated Free Fall
@@ -124,7 +128,7 @@ POSSIBILITY OF SUCH DAMAGE.
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <h2>Key Skills</h2>
+                    <h2 class="mt-2">Key Skills</h2>
                     <ul>
                         <li>Software design using UML</li>
                         <li>Java, C, Python and Ruby Programming</li>
@@ -139,13 +143,15 @@ POSSIBILITY OF SUCH DAMAGE.
                     </ul>
                 </div>
             </div>
+         
+            <hr />
 
-            <div class="page-header">
+            <div class="mb-2">
                 <h1 id="projects">Current projects</h1>
             </div>
             <div class="row">
                 <div class="col-lg-3">
-                    <h2>FAHView</h2>
+                    <h2 class="mt-2">FAHView</h2>
                     <p>
                         Final year University project. To create a viewer application in Java
                         to display information from a Folding@Home client.
@@ -155,7 +161,7 @@ POSSIBILITY OF SUCH DAMAGE.
                     </a>
                 </div>
                 <div class="col-lg-3">
-                    <h2>FAHWeb</h2>
+                    <h2 class="mt-2">FAHWeb</h2>
                     <p>
                         Extension of work on FAHView. To create a web front end
                         to control Folding@Home v7 clients.
@@ -165,7 +171,7 @@ POSSIBILITY OF SUCH DAMAGE.
                     </a>
                 </div>
                 <div class="col-lg-3">
-                    <h2>FAHServices</h2>
+                    <h2 class="mt-2">FAHServices</h2>
                     <p>
                         Extension of work on FAHWeb.To create a REST API to be
                         used by FAHWeb to control Folding@Home v7 clients.
@@ -175,7 +181,7 @@ POSSIBILITY OF SUCH DAMAGE.
                     </a>
                 </div>
                 <div class="col-lg-3">
-                    <h2>jFold</h2>
+                    <h2 class="mt-2">jFold</h2>
                     <p>
                         Java Library to connect to the Client Remote Interface
                         in the new new Folding@Home v7 Client.
@@ -186,7 +192,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 </div>
             </div>
 
-            <div class="page-header">
+            <hr />
+
+            <div class="mt-2">
                 <h1 id="timeline">How I've got here!</h1>
             </div>
             <ul class="timeline" data-js="timeline">
@@ -194,33 +202,38 @@ POSSIBILITY OF SUCH DAMAGE.
                     {{#each .}}
                     <li class={{#if (isEducation icon)}}"timeline-inverted wow fadeInRight"{{else}}"wow fadeInLeft"{{/if}}>
                         <div class="timeline-badge {{color}}">
-                            <i class="glyphicon glyphicon-{{icon}}"></i>
+                             <i class="fa fa-{{icon}}"></i>
+                         </div>
+                         <div class="timeline-panel">
+                             <div class="timeline-heading">
+                                 <h4 class="timeline-title">{{title}}</h4>
+                                 <small class="mb-1 text-muted">
+                                     <i class="fa fa-calendar"></i>
+                                     {{formatDate startDate}} - {{formatDate endDate}} ({{dateDiff startDate endDate}})
+                                 </small>
+                             </div>
+                             <div class="timeline-body">
+                                 <h5 class="mt-2">{{location}} ({{city}})</h5>
+                                 {{{description}}}
+                             </div>
+                         </div>
+                     </li>
+                     {{/each}}
+                     </script>
+                    </ul>
+
+                    <hr />
+
+                    <footer class="text-muted">
+                        <div class="container">
+                            <p class="float-right">
+                                <a href="#">Back to top</a>
+                            </p>
+                            <p>&copy; 2017 Mike Thomas, All rights reserved.</p>
                         </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="timeline-title">{{title}}</h4>
-                                <small class="text-muted">
-                                    <i class="glyphicon glyphicon-calendar"></i>
-                                    {{formatDate startDate}} - {{formatDate endDate}} ({{dateDiff startDate endDate}})
-                                </small>
-                            </div>
-                            <div class="timeline-body">
-                                <h5>{{location}} ({{city}})</h5>
-                                {{{description}}}
-                            </div>
-                        </div>
-                    </li>
-                    {{/each}}
-                </script>
-            </ul>
+                    </footer>
+                </div> <!-- /container -->
 
-            <hr>
-
-            <footer>
-                <p>&copy; 2017 Mike Thomas, All rights reserved.</p>
-            </footer>
-        </div> <!-- /container -->
-
-        <script data-main="js/application" src="libs/requirejs/require.js"></script>
-    </body>
-</html>
+                <script data-main="js/application" src="libs/requirejs/require.js"></script>
+            </body>
+        </html>
