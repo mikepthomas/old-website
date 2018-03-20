@@ -1,5 +1,5 @@
 /* 
- * Copyright (c) 2016, Mike Thomas
+ * Copyright (c) 2016-2018, Mike Thomas
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -105,7 +105,7 @@ gulp.task('js', function () {
 gulp.task('watch', function () {
     gulp.watch('src/sass/**/*.scss', ['css']);
     gulp.watch('src/img/**/*.{png, jpg, bmp}', ['img']);
-    gulp.watch('src/js/**/*.js', ['js']);
+    gulp.watch('src/js/**/*.{js,ts}', ['js']);
 });
 
 gulp.task('default', ['css', 'img','js'], function () {

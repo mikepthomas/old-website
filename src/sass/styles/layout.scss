@@ -36,6 +36,10 @@ body, html {
 }
 
 .github-banner {
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+
     img {
         position: fixed;
         top: 0;
@@ -51,7 +55,7 @@ body, html {
     background-position: 35% 100%;
     background-size: cover;
     color: whitesmoke;
-    text-shadow: 3px 3px 3px $gray-dark, 0 0 1px black;
+    text-shadow: 3px 3px 3px $dark, 0 0 1px black;
     height: 100%;
 
     .container {
@@ -95,7 +99,7 @@ body, html {
         position: absolute;
         content: " ";
         width: 3px;
-        background-color: $gray-lighter;
+        background-color: $light;
         left: 50%;
         margin-left: -1.5px;
     }
@@ -149,8 +153,8 @@ body, html {
                 right: -15px;
                 display: inline-block;
                 border-top: 15px solid transparent;
-                border-left: 15px solid $pre-border-color;
-                border-right: 0 solid $pre-border-color;
+                border-left: 15px solid $border-color;
+                border-right: 0 solid $border-color;
                 border-bottom: 15px solid transparent;
                 content: " ";
             }
@@ -179,28 +183,28 @@ body, html {
             top: 16px;
             left: 50%;
             margin-left: -25px;
-            background-color: $gray-light;
+            background-color: $dark;
             z-index: 100;
             border-radius: 50%;
 
             &.primary {
-                background-color: $brand-primary;
+                background-color: $primary;
             }
 
             &.success {
-                background-color: $brand-success;
+                background-color: $success;
             }
 
             &.info {
-                background-color: $brand-info;
+                background-color: $info;
             }
 
             &.warning {
-                background-color: $brand-warning;
+                background-color: $warning;
             }
 
             &.danger {
-                background-color: $brand-danger;
+                background-color: $danger;
             }
         }
     }
@@ -220,7 +224,15 @@ body, html {
     margin-top: 5px;
 }
 
+ul {
+    padding-left: 15px;
+}
+
 @include media-breakpoint-down(sm) {
+    .hidden-sm-down {
+        display: none;
+    }
+
     ul.timeline:before {
         left: 40px;
     }

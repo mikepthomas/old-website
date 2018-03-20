@@ -1,5 +1,5 @@
 /* 
- * Copyright (c) 2017, Mike Thomas
+ * Copyright (c) 2016-2018, Mike Thomas
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,12 +26,11 @@
 require.config({
     paths: {
         backbone: "/libs/backbone/backbone-min",
-        bootstrap: "/libs/bootstrap/bootstrap.min",
+        bootstrap: "/libs/bootstrap/bootstrap.bundle.min",
         handlebars: "/libs/handlebars/handlebars.min",
         jquery: "/libs/jquery/jquery.min",
         jspdf: "/libs/jspdf/jspdf.min",
         moment: "/libs/moment/moment.min",
-        tether: "/libs/tether/tether.min",
         underscore: "/libs/underscore/underscore-min",
         wow: "/libs/wow/wow.min"
     },

@@ -1,2 +1,2 @@
-require(["require-config"],function(){require(["jquery"],function(e){e("html").find("*[data-js]").each(function(n,o){var r=e(o),u=r.data("js");u?e.each(u.split(" "),function(e,n){require([n],function(e){e.default(r)},function(e){console.log(e.requireModules[0]+".js not found.")})}):console.error("Empty data-js tag found, remove references.")})})});
+require(["require-config"],function(){require(["jquery","bootstrap"],function(t){t("html").find("*[data-js]").each(function(e,n){var o=t(n),r=o.data("js");r?t.each(r.split(" "),function(e,n){require([n],function(e){e.default(o)},function(e){console.log(e.requireModules[0]+".js not found.")})}):console.error("Empty data-js tag found, remove references.")})})});
 //# sourceMappingURL=application.js.map

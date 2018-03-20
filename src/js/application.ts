@@ -1,5 +1,5 @@
 /* 
- * Copyright (c) 2017, Mike Thomas
+ * Copyright (c) 2016-2018, Mike Thomas
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,7 +24,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 require(["require-config"], () => {
-    require(["jquery"], ($: JQueryStatic) => {
+    require(["jquery", "bootstrap"], ($: JQueryStatic) => {
         $("html").find("*[data-js]").each(function(index, value) {
             let element = $(value),
                 files: string = element.data("js");

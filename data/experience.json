@@ -1,8 +1,17 @@
 [
     {
+        "title": "Senior Software Engineer (Java/Cloud)",
+        "startDate": "2018-02-19T00:00:00.000Z",
+        "endDate": null,
+        "city": "Cardiff",
+        "location": "The British Broadcasting Corporation",
+        "color": "primary",
+        "icon": "briefcase"
+    },
+    {
         "title": "Senior Java Developer",
         "startDate": "2014-03-01T00:00:00.000Z",
-        "endDate": null,
+        "endDate": "2018-02-09T00:00:00.000Z",
         "city": "Bristol",
         "location": "Unite Students",
         "description": "<p>\n    Supporting Student and Group websites utilising\n    Oracle Fusion Middleware. Projects include\n    visual redesign of Corporate website to use new\n    corporate branding and the launch of brand new\n    responsive Students website. Current projects\n    include integrating website with new back-end\n    booking system and migrating current systems to\n    new hardware.\n</p>",
