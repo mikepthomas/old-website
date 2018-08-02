@@ -23,12 +23,11 @@
   ],
   "dependencies": {
     "backbone": "1.3.3",
-    "bootstrap": "4.0.0",
+    "bootstrap": "4.1.3",
     "font-awesome": "4.7.0",
     "handlebars": "4.0.11",
     "jquery": "3.3.1",
-    "jspdf": "1.3.5",
-    "moment": "2.21.0",
+    "moment": "2.22.2",
     "requirejs": "2.3.5",
     "wow": "1.1.2"
   },
@@ -71,10 +70,6 @@
         "bower_components/jquery/dist/jquery.js",
         "bower_components/jquery/dist/jquery.min.js",
         "bower_components/jquery/dist/jquery.min.map"
-      ],
-      "jspdf": [
-        "bower_components/jspdf/dist/jspdf.debug.js",
-        "bower_components/jspdf/dist/jspdf.min.js"
       ],
       "moment": [
         "bower_components/moment/min/moment.min.js",

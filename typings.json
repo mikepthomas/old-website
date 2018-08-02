@@ -5,7 +5,6 @@
     "bootstrap": "registry:dt/bootstrap#3.3.5+20160726204056",
     "handlebars": "registry:dt/handlebars#4.0.5+20170310072326",
     "jquery": "registry:dt/jquery#1.10.0+20170310222111",
-    "jspdf": "registry:dt/jspdf#1.1.135+20160921164505",
     "moment": "registry:dt/moment#2.11.1+20161010105546",
     "requirejs": "registry:dt/requirejs#2.1.20+20160921164505",
     "underscore": "registry:dt/underscore#1.8.3+20161123125004"
