@@ -5,6 +5,7 @@
         "endDate": null,
         "city": "Cardiff",
         "location": "The British Broadcasting Corporation",
+        "url": "http://www.bbc.co.uk",
         "color": "primary",
         "icon": "briefcase"
     },
@@ -14,6 +15,7 @@
         "endDate": "2018-02-09T00:00:00.000Z",
         "city": "Bristol",
         "location": "Unite Students",
+        "url": "http://www.unitestudents.com",
         "description": "<p>\n    Supporting Student and Group websites utilising\n    Oracle Fusion Middleware. Projects include\n    visual redesign of Corporate website to use new\n    corporate branding and the launch of brand new\n    responsive Students website. Current projects\n    include integrating website with new back-end\n    booking system and migrating current systems to\n    new hardware.\n</p>",
         "color": "primary",
         "icon": "briefcase"
@@ -24,6 +26,7 @@
         "endDate": "2015-12-01T00:00:00.000Z",
         "city": "Bristol",
         "location": "Royal Navy",
+        "url": "http://www.royalnavy.mod.uk",
         "color": "info",
         "icon": "ship"
     },
@@ -33,6 +36,7 @@
         "endDate": "2014-02-01T00:00:00.000Z",
         "city": "Bristol",
         "location": "Quote Exchange, Brightside Group",
+        "url": "http://www.quoteexchange.co.uk",
         "description": "<p>\n    Responsible for developing well designed and\n    documented, highly scalable, highly available\n    web based systems as well as providing\n    day-to-day operational support and development.\n    Current projects include creating an insurance\n    comparison website using Java frameworks (Struts\n    2 and Spring) with Relational Databases (SQL\n    Server and MySQL) and developing supporting\n    websites to collect risk data for third party\n    insurance companies. Previous project was to\n    create a distributed regression test tool using\n    Selenium Grid to automate the testing of\n    websites.\n</p>",
         "color": "primary",
         "icon": "briefcase"
@@ -43,6 +47,7 @@
         "endDate": "2012-07-01T00:00:00.000Z",
         "city": "Bristol",
         "location": "University of the West of England",
+        "url": "http://www.uwe.ac.uk",
         "description": "<ul>\n    <li>Advanced Topics in Web Development [54%]</li>\n    <li>Components and Services [50%]</li>\n    <li>Computing Project [60%]</li>\n    <li>Embedded Systems Development [67%]</li>\n    <li>Professional, Legal &amp; Commercial Issues [52%]</li>\n    <li>Requirements Engineering [64%]</li>\n</ul>",
         "color": "success",
         "icon": "mortar-board"
@@ -53,6 +58,7 @@
         "endDate": "2011-08-01T00:00:00.000Z",
         "city": "Bristol",
         "location": "University of the West of England",
+        "url": "http://www.uwe.ac.uk",
         "description": "<p>\n    Administrator for the one of the Faculty of\n    Environment and Technology’s Databases (FOLD);\n    Duties included supporting administration staff\n    with database queries and HTML reports, writing\n    technical documentation using the Docbook\n    documentation standard, updating look and feel\n    of publicly accessible pages to be more in-line\n    with main University website and a member of the\n    design team for the new SQL Server database and\n    started translation and migration of existing\n    data to the new .Net based system.\n</p>",
         "color": "primary",
         "icon": "briefcase"
@@ -63,6 +69,7 @@
         "endDate": "2012-08-01T00:00:00.000Z",
         "city": "Bristol",
         "location": "Apple Retail",
+        "url": "http://www.apple.co.uk",
         "description": "<p>\n    Inventory control for a large technology\n    retailer. Main Duties include the timely and\n    accurate receiving, tracking and maintenance of\n    store merchandise in the store and stock room\n    and to support the front of house team so that\n    they can meet and exceed the customers needs.\n</p>",
         "color": "info",
         "icon": "apple"
@@ -73,6 +80,7 @@
         "endDate": "2010-07-01T00:00:00.000Z",
         "city": "Bristol",
         "location": "University of the West of England",
+        "url": "http://www.uwe.ac.uk",
         "description": "<ul>\n    <li>Client-Server Programming [79%]</li>\n    <li>Computer Networks and Operating Systems [71%]</li>\n    <li>Data, Schemas and Applications [74%]</li>\n    <li>Project Management [70%]</li>\n    <li>Software Design [83%]</li>\n    <li>Software Engineering [53%]</li>\n</ul>",
         "color": "success",
         "icon": "mortar-board"
@@ -93,6 +101,7 @@
         "endDate": "2009-07-01T00:00:00.000Z",
         "city": "Bristol",
         "location": "University of the West of England",
+        "url": "http://www.uwe.ac.uk",
         "description": "<ul>\n    <li>Analytical Modelling [87%]</li>\n    <li>Computer Science Concepts [80%]</li>\n    <li>Computer Systems [65%]</li>\n    <li>Information Systems Application Contexts [59%]</li>\n    <li>Introduction to Program Development [92%]</li>\n    <li>Systems Development [72%]</li>\n</ul>",
         "color": "success",
         "icon": "mortar-board"
@@ -103,6 +112,7 @@
         "endDate": "2008-05-01T00:00:00.000Z",
         "city": "Milford Haven",
         "location": "Securitas Security Services",
+        "url": "http://www.securitas.uk.com",
         "description": "<p>\n    Static Security Officer during the construction\n    of South Hook LNG, Milford Haven, one of the\n    largest Liquefied Natural Gas re-gasification\n    Terminal in Europe. Responsibilities included\n    physical security of the facility, access\n    control, site patrols and vehicle searches.\n</p>",
         "color": "danger",
         "icon": "lock"
@@ -123,6 +133,7 @@
         "endDate": "2004-07-01T00:00:00.000Z",
         "city": "Haverfordwest",
         "location": "Pembrokeshire College",
+        "url": "http://www.pembrokeshire.ac.uk",
         "description": "<ul>\n    <li>Double Award AVCE in ICT [B,B]</li>\n    <li>Advanced Subsidiary Physics [E]</li>\n</ul>",
         "icon": "mortar-board"
     },
@@ -132,6 +143,7 @@
         "endDate": "2002-07-01T00:00:00.000Z",
         "city": "Haverfordwest",
         "location": "Sir Thomas Picton School",
+        "url": "http://www.stp.pembrokeshire.sch.uk",
         "description": "<ul>\n    <li>Eight Full Course [Seven Grade C and Above]</li>\n    <li>Two Short Course [A and B]</li>\n</ul>",
         "icon": "mortar-board"
     }

@@ -213,7 +213,13 @@ POSSIBILITY OF SUCH DAMAGE.
                                  </small>
                              </div>
                              <div class="timeline-body">
+                                 {{#if url}}
+                                     <a href="{{url}}" target="_blank">
+                                 {{/if}}
                                  <h5 class="mt-2">{{location}} ({{city}})</h5>
+                                 {{#if url}}
+                                     </a>
+                                 {{/if}}
                                  {{{description}}}
                              </div>
                          </div>
